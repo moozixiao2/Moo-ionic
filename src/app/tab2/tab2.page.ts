@@ -37,7 +37,7 @@ export class Tab2Page {
 
     // 开始播放
     if (this.playStatus) {
-      this.play()
+      this.play();
     } else {
       // 暂停
       clearInterval(this.ctrl);
@@ -59,15 +59,26 @@ export class Tab2Page {
         {
           text: '继续学习',
           handler: () => {
-            console.log('继续学习');
-            if(this.total > 0) {
-              this.play()
+            if (this.total > 0) {
+              clearInterval(this.ctrl);
+              if (!this.playStatus) {
+                return;
+              } else {
+                this.playStatus = true;
+                this.play();
+              }
             }
+            console.log('继续学习');
           }
         },
         {
           text: '休息一下',
           handler: () => {
+            this.counterMin = 0;
+            this.counterSec = 5;
+            this.total = this.counterMin * 60 + this.counterSec;
+            this.playStatus = true;
+            this.play();
             console.log('休息一下');
           }
         }
