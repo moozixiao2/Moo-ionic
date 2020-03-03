@@ -1,0 +1,99 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+ion-content {
+  --padding-end: 15px;
+  --padding-start: 15px;
+}
+/* 密码帐号 */
+ion-grid {
+  margin-top: 30px;
+}
+
+.btn {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.loginbtn {
+  background: linear-gradient(to right, #ffb975, #ffd58b);
+  color: #fff;
+  border-radius: 20px;
+}
+.loginbtn2 {
+  color: #ffb975;
+  border: solid 2px #f1d9c5;
+  border-radius: 20px;
+}
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 手机 */
+.phoneHeader {
+  // display: flex;
+  // font-display: row;
+  // justify-content: center;
+  // align-items: center;
+  ion-icon {
+    width: 100%;
+    font-size: 101px;
+  }
+  span {
+    width: 100%;
+    text-align: center;
+    &:last-child {
+      font-size: 14px;
+      color: #999;
+    }
+  }
+}
+.phone {
+  margin-top: 20px;
+  ion-select, ion-input {
+    border-bottom: solid 1px #eaeaed;
+    margin-bottom: 30px;
+  }
+}
+
+/* 底部 */
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  color: #666;
+  .text {
+    flex-shrink: 0;
+    padding: 0 15px;
+  }
+  .line {
+    display: inline-block;
+    width: 100%;
+    border-bottom: dashed 1px #dcdcdc;
+  }
+}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  ion-icon{
+    font-size: 40px;
+  }
+  a{
+    font-size: 14px;
+    color: #3880ff;
+  }
+}
+
+ion-footer {
+  margin-bottom: 12px;
+}
+.footer-md:before {
+  height: 0
+}
