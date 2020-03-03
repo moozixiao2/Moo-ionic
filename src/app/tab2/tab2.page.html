@@ -9,8 +9,8 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
     <ion-row>
-      <ion-col>已经学习时间</ion-col>
-      <ion-col>已经休息时间</ion-col>
+      <ion-col>已学习：<span class='study'>{{totalStudy}}</span>min</ion-col>
+      <ion-col>已休息：<span class='rest'>{{totalRest}}</span>min</ion-col>
     </ion-row>
     <ion-row class="time">
       {{counterMin < 10 ? '0' + counterMin : counterMin}}:{{counterSec < 10 ? '0' + counterSec : counterSec}}
@@ -24,7 +24,7 @@
         <ion-icon name='square' class='commonBtn' color='primary' (click)="stopPlay()" ></ion-icon>
       </ion-col>
       <ion-col size='2'>
-        <ion-button expand='fill'>打卡</ion-button>
+        <ion-button expand='fill' (click)="countAll()" >打卡</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -32,6 +32,6 @@
 
 <ion-footer>
   <ion-toolbar>
-    打卡记录
+    打卡记录: {{record}}
   </ion-toolbar>
 </ion-footer>
